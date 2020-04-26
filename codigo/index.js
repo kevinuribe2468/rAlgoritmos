@@ -38,3 +38,41 @@ function calculardescuento(){
   }
   resultado.innerHTML = "El total de la compra es: " + total;
 }
+function calcularpromedio(){
+  var out = document.getElementById("out");
+  var nota1 = parseInt(document.getElementById("nota1").value);
+  var nota2 = parseInt(document.getElementById("nota2").value);
+  var nota3 = parseInt(document.getElementById("nota3").value);
+  var sum = nota1 + nota2 + nota3;
+  alert(sum)
+  var prom = Math.floor((sum)/3);
+  alert(prom)
+  if(prom == 10 ){
+    msg = "A";
+  }else if(prom == 9){
+    msg = "B";
+  }else if(prom == 8){
+    msg = "B";
+  }else{
+    msg = "Reprobo";
+  }
+  out.innerHTML = msg;
+}
+function numeros(){
+  var num1 = parseInt(document.getElementById("numero1").value);
+  var num2 = parseInt(document.getElementById("numero2").value);
+  var out = document.getElementById("salida");
+  var rpta,pri;
+  if (num1>num2) {
+    pri = num1 + num2;
+    rpta = "La suma es: " + pri;
+  }else if(num2>num1){
+    pri = (num1*num1)+(num2*num2);
+    rpta = "La suma y los dos elevados al cuadrado es:" + pri;
+  }else{
+    rpta = "Los numeros son iguales"
+  }
+  out.innerHTML = rpta;
+
+
+}
