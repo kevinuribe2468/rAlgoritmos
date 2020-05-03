@@ -73,6 +73,17 @@ function numeros(){
     rpta = "Los numeros son iguales"
   }
   out.innerHTML = rpta;
+}
 
-
+function numerresta(){
+  var n1 = document.getElementById("name1").value;
+  var n2 = document.getElementById("name2").value;
+  var out = document.getElementById("resul");
+  var salid;
+  if(n1>n2){
+    salid = n1-n2;
+  }else{
+    salid = n2-n1;
+  }
+  out.innerHTML = salid;
 }
